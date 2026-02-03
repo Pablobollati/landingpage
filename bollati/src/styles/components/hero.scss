@@ -1,0 +1,143 @@
+.ba-hero {
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeSlide 24s infinite;
+    transform: scale(1);
+  }
+
+  .bg1 {
+    background-image: url("/images/hero1.jpg");
+    animation-delay: 0s;
+  }
+
+  .bg2 {
+    background-image: url("/images/hero2.jpg");
+    animation-delay: 8s;
+  }
+  
+  .bg3 {
+    background-image: url("/images/hero3.jpg");
+    animation-delay: 16s;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(11, 35, 64, 0.767),
+      rgba(11, 35, 64, 0.508),
+      rgba(11, 35, 64, 0.178)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .overlay__content {
+    max-width: 720px;
+    width: 90vw;
+    display: grid;
+    gap: 50%;
+    justify-items: center;
+  }
+
+  .overlay__eyebrow {
+    margin: 0;
+    letter-spacing: 0.14em;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #d6cdc4;
+  }
+
+  .overlay__content h1 {
+    margin: 0;
+    font-family: var(--font-aptos);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.15;
+  }
+
+  .overlay__logo-img {
+    width: min(700px, 72vw);
+    height: auto;
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.35));
+  }
+
+  .overlay__actions {
+    display: inline-flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .ba-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: var(--font-aptos);
+    transition: background-color 0.2s ease, color 0.2s ease,
+      box-shadow 0.2s ease, transform 0.1s ease;
+  }
+
+  .ba-btn--primary {
+    background: #f2ebeb;
+    color: var(--ba-blue);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: #ffffff;
+      transform: translateY(-1px);
+    }
+  }
+
+  .ba-btn--ghost {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+    background: transparent;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateX(0);
+  }
+  5%,
+  30% {
+    opacity: 1;
+    transform: scale(1.05) translateX(-15px);
+  }
+  35%,
+  100% {
+    opacity: 0;
+    transform: scale(1.1) translateX(-25px);
+  }
+}

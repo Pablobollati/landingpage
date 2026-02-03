@@ -1,0 +1,247 @@
+/* src/styles/components/nosotros.scss */
+@use "../../styles/variables" as *;
+
+.ba-about {
+  background-color: #f7f7f7;
+}
+
+/* Contenido general: texto + destacados */
+.ba-about__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: stretch;
+}
+
+/* Columna de texto */
+.ba-about__text p {
+  margin: 0 0 14px;
+  line-height: 1.7;
+  color: var(--ba-graphite);
+  font-size: 0.98rem;
+}
+
+/* Columna de destacados (Misión / Visión) */
+.ba-about__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Card de Misión / Visión */
+.ba-highlight {
+  display: grid;
+  grid-template-columns: minmax(200px, 42%) 1fr;
+  background: #ffffff;
+  border: 1px solid rgba(11, 35, 64, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ba-highlight--reverse {
+  grid-template-columns: 1fr minmax(200px, 42%);
+}
+
+.ba-highlight__image {
+  order: 1;
+  background-size: cover;
+  background-position: center;
+  min-height: 210px;
+}
+
+.ba-highlight__body {
+  order: 2;
+  padding: 18px 20px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+}
+
+.ba-highlight__body h3 {
+  margin: 0;
+  color: var(--ba-blue);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.ba-highlight__body p {
+  margin: 0;
+  color: var(--ba-graphite);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+// .ba-highlight:hover {
+//   transform: translateY(-4px);
+//   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+// }
+
+.ba-highlight--reverse .ba-highlight__image {
+  order: 2;
+}
+
+.ba-highlight--reverse .ba-highlight__body {
+  order: 1;
+}
+
+/* EQUIPO */
+
+.ba-about__team {
+  display: grid;
+  gap: 24px;
+}
+
+/* Escritorio grande: 3 columnas (ideal para 3 personas) */
+@media (min-width: 1040px) {
+  .ba-about__team {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Tablet / escritorio chico: 2 columnas */
+@media (min-width: 720px) and (max-width: 1039px) {
+  .ba-about__team {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile: 1 columna */
+@media (max-width: 719px) {
+  .ba-about__team {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card del equipo */
+
+.ba-team-card {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: var(--ba-blue);
+  color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 35, 64, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ba-team-card__photo {
+  width: 100%;
+  padding-top: 70%;
+  background-size: cover;
+  background-position: center;
+  background-color: #d0d0d0;
+  position: relative;
+}
+
+.ba-team-card__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(214, 205, 196, 0.747); 
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.ba-team-card__info {
+  padding: 18px 18px 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.ba-team-card__info h4 {
+  margin: 0 0 2px;
+  font-family: var(--font-aptos);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.02rem;
+}
+
+.ba-team-card__role {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  color: var(--ba-blue-soft);
+}
+
+.ba-team-card__info p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #f7f7f7;
+}
+
+/* Links (LinkedIn) */
+
+.ba-team-card__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.ba-team-card__links a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: var(--ba-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border: 1px solid rgba(214, 205, 196, 0.9);
+  transition: transform 0.1s ease, box-shadow 0.2s ease,
+    background-color 0.15s ease;
+}
+
+.ba-team-card__links a:hover {
+  background-color: #f2f4f8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.ba-team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+}
+
+.ba-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.ba-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ba-highlight,
+  .ba-team-card,
+  .ba-reveal {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE: sección Nosotros */
+
+@media (max-width: 960px) {
+  .ba-highlight,
+  .ba-highlight--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .ba-highlight__image {
+    min-height: 200px;
+  }
+}
