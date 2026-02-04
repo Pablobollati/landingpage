@@ -15,8 +15,10 @@ export default function Hero() {
           <Image
             src="/logos/logoD.png"
             alt="Bollati Abogados"
-            width={360}
-            height={120}
+            width={1400}
+            height={213}
+            sizes="(max-width: 768px) 72vw, 700px"
+            quality={95}
             priority
             className="overlay__logo-img"
           />
