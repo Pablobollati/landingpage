@@ -6,7 +6,7 @@ import { IoMdCheckmark  } from "react-icons/io";
 import "../styles/components/contacto.scss";
 
 const contactInfo = [
-  { label: "Teléfono", value: "+54 9 351 000 0000", icon: FiPhone },
+  { label: "Teléfono", value: "+54 9 351 808 6261", icon: FiPhone },
   { label: "Email", value: "info@bollatiabogados.com", icon: FiMail },
   { label: "Dirección", value: "Córdoba, Argentina", icon: FiMapPin },
 ];
