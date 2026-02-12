@@ -130,12 +130,12 @@
     opacity: 0;
     transform: scale(1) translateX(0);
   }
-  5%,
+  15%,
   30% {
     opacity: 1;
     transform: scale(1.05) translateX(-15px);
   }
-  35%,
+  60%,
   100% {
     opacity: 0;
     transform: scale(1.1) translateX(-25px);
