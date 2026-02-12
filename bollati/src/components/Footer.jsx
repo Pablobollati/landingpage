@@ -1,4 +1,4 @@
-import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import "../styles/components/footer.scss";
 
 export default function Footer() {
@@ -7,25 +7,29 @@ export default function Footer() {
   return (
     <footer className="ba-footer">
       <div className="ba-footer__inner">
-        <div className="ba-footer__info">
+        {/* <div className="ba-footer__info">
           <p>Bollati Abogados</p>
-        </div>
+        </div> */}
 
         <div className="ba-footer__social">
-          <a href="#" aria-label="LinkedIn">
-            <FaLinkedinIn />
-          </a>
-          <a href="#" aria-label="Instagram">
-            <FaInstagram />
-          </a>
-          <a href="#" aria-label="Facebook">
-            <FaFacebookF />
+          <a
+            className="ba-footer__social-link"
+            href="https://www.linkedin.com/company/bollati-abogados"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <span className="ba-footer__social-icon">
+              <FaLinkedinIn />
+            </span>
+            <span className="ba-footer__social-label">LinkedIn</span>
           </a>
         </div>
-
-        <p className="ba-footer__copy">
-          © {year} Bollati Abogados. Todos los derechos reservados.
-        </p>
+        <div className="ba-footer__info">
+          <p className="ba-footer__copy">
+            © {year} Bollati Abogados. Todos los derechos reservados.
+          </p>
+        </div>
       </div>
     </footer>
   );

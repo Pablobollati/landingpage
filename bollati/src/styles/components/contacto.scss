@@ -44,6 +44,19 @@
   min-width: 0;
 }
 
+.ba-contact__meta-item--link {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.ba-contact__meta-item--link:hover {
+  border-color: rgba(37, 211, 102, 0.45);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
 .ba-contact__meta-left {
   display: flex;
   align-items: center;
@@ -64,6 +77,12 @@
   flex-shrink: 0;
 }
 
+.ba-contact__meta-icon--whatsapp {
+  background: rgba(37, 211, 102, 0.14);
+  border-color: rgba(37, 211, 102, 0.4);
+  color: #128c7e;
+}
+
 .ba-contact__label {
   display: block;
   font-weight: 700;
@@ -74,6 +93,13 @@
 .ba-contact__value {
   color: var(--ba-graphite);
   word-break: break-word;
+}
+
+.ba-contact__meta-cta {
+  font-weight: 600;
+  color: #128c7e;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 .ba-contact__copy {

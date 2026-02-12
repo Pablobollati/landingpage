@@ -11,19 +11,9 @@ const servicios = [
       "Constitución de sociedades, contratos comerciales, mediación entre socios y acompañamiento legal en el crecimiento de empresas.",
   },
   {
-    title: "Contratos y conflictos comerciales",
+    title: "Contratos",
     description:
       "Redacción, revisión y ejecución de contratos civiles y comerciales. Prevención, negociación y resolución de conflictos contractuales.",
-  },
-  {
-    title: "Derecho tributario",
-    description:
-      "Asesoramiento impositivo, estrategias fiscales preventivas y defensa en procedimientos administrativos y judiciales.",
-  },
-  {
-    title: "Concursos y quiebras",
-    description:
-      "Representación de acreedores y deudores, reestructuración de pasivos, acuerdos preventivos y procesos concursales.",
   },
   {
     title: "Litigios complejos",
@@ -33,7 +23,12 @@ const servicios = [
   {
     title: "Defensa patrimonial y relaciones de consumo",
     description:
-      "Responsabilidad civil, daños y perjuicios, cobros, desalojos y defensa del patrimonio personal. Acompañamos a empresas frente a reclamos y multas de consumidores.",
+      "Asesoramos a nuestros clientes en la organización, protección y optimización de su patrimonio mediante estrategias preventivas orientadas a resguardar sus bienes. Asimismo, intervenimos en su defensa frente a reclamos, embargos y conflictos derivados de relaciones de consumo u otras contingencias que puedan comprometer sus activos.",
+  },
+  {
+    title: "Derecho del Trabajo",
+    description:
+      "Acompañamos a nuestros clientes durante todo el ciclo de la relación laboral, mediante un enfoque preventivo basado en el análisis minucioso de cada situación y en la gestión eficiente del recurso humano, orientado a reducir contingencias y prevenir conflictos.",
   },
 ];
 
@@ -50,7 +45,8 @@ export default function Servicios() {
         <div className="ba-section__header">
           <h2>Servicios</h2>
           <p>
-            Asesoramos de manera integral para que tomes decisiones con seguridad.
+            Asesoramos de manera integral para que tomes decisiones con
+            seguridad.
           </p>
         </div>
 

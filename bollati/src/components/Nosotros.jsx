@@ -8,26 +8,26 @@ const equipo = [
   {
     nombre: "Pablo Ignacio Bollati",
     rol: "Socio fundador",
-    desc: "Abogado egresado de la Universidad Nacional de Córdoba y Magíster en Derecho y Economía por la Universidad Torcuato Di Tella. Experto en derecho empresarial, litigios complejos y asesoramiento estratégico a compañías en crecimiento. Combina análisis técnico, visión de negocio y acompañamiento directo en decisiones críticas.",
+    desc: "Abogado egresado de la Universidad Nacional de Córdoba y Magíster en Derecho y Economía por la Universidad Torcuato Di Tella.",
     foto: "/images/team1.jpg",
-    linkedin: "#",
-    mail: "#",
+    linkedin: "https://www.linkedin.com/in/pablo-ignacio-bollati-92aa6847?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    mail: "pbollati@bollatiabogados.com",
   },
   {
     nombre: "Nicolle Anahid Avakian",
     rol: "Abogada asociada",
-    desc: "Abogada por la Universidad Católica de Córdoba. Diplomada en Derecho Laboral, Responsabilidad Civil y Procesos de Daños. Su práctica se centra en conflictos laborales, responsabilidad civil y gestión integral de reclamos. Se destaca por su enfoque resolutivo y orientación al cliente.",
+    desc: "Abogada egresada en la Universidad Católica de Córdoba. Diplomada en Derecho Laboral, Responsabilidad Civil y Procesos de Daños.",
     foto: "/images/team3.jpg",
-    linkedin: "#",
-    mail: "#",
+    linkedin: "https://www.linkedin.com/in/nicolle-avakian-431782287/",
+    mail: "navakian@bollatiabogados.com",
   },
   {
     nombre: "María Paz Maurino",
     rol: "Abogada asociada",
-    desc: "Abogada egresada de la Universidad Nacional de Córdoba. Integra el área de derecho civil, comercial y defensa patrimonial, con experiencia en litigios, contratos y asesoramiento preventivo a particulares y empresas.",
+    desc: "Abogada egresada de la Universidad Nacional de Córdoba, con experiencia en derecho societario y derecho empresarial.",
     foto: "/images/team2.1.jpg",
-    linkedin: "#",
-    mail: "#",
+    linkedin: "https://www.linkedin.com/in/paz-maurino-546148202/",
+    mail: "pmaurino@bollatiabogados.com",
   },
 ];
 
@@ -35,13 +35,13 @@ const destacados = [
   {
     titulo: "Misión",
     texto:
-      "Guiarte con soluciones legales precisas, eficientes y alineadas a tus objetivos de negocio o personales.",
+      "Desarrollamos soluciones jurídicas claras y efectivas, adaptadas a la realidad y objetivos de empresas y personas.",
     imagen: "/images/teamtodos.jpg",
   },
   {
     titulo: "Visión",
     texto:
-      "Ser tu aliado de confianza a largo plazo, combinando excelencia técnica con cercanía en cada decisión.",
+      "Aportar respaldo jurídico confiable, con rigor técnico y acompañamiento estratégico en cada decisión.",
     imagen: "/images/teamtodos3.jpg",
   },
 ];
@@ -58,7 +58,7 @@ export default function Nosotros() {
           }
         });
       },
-      { threshold: 0.18 }
+      { threshold: 0.18 },
     );
 
     items.forEach((item) => observer.observe(item));
@@ -71,22 +71,25 @@ export default function Nosotros() {
         <div className="ba-section__header">
           <h2>Nosotros</h2>
           <p>
-            Somos Bollati Abogados, un estudio jurídico que acompaña decisiones estratégicas
-            de negocios y personas con un enfoque cercano y resolutivo.
+            Somos Bollati Abogados, un estudio jurídico orientado a potenciar el
+            crecimiento de nuestros clientes. Brindamos asesoramiento legal a
+            pequeñas, medianas y grandes empresas.
           </p>
         </div>
 
         <div className="ba-about__content">
           <div className="ba-about__text">
             <p>
-              Brindamos asesoramiento integral a empresas en sus etapas clave: constitución,
-              expansión, compliance y resolución de conflictos. También representamos a
-              personas en litigios patrimoniales y procesos complejos con una mirada técnica
-              y humana.
+              También acompañamos a personas físicas en la defensa y protección
+              de su patrimonio, manteniendo siempre nuestro sello distintivo:
+              responsabilidad, compromiso y diligencia.
             </p>
             <p>
-              Trabajamos con equipos multidisciplinarios para diseñar estrategias claras y
-              accionables, priorizando la prevención y la defensa efectiva de tus intereses.
+              Trabajamos con un enfoque estratégico, ofreciendo respuestas
+              ágiles, precisas y diseñadas a medida de cada cliente. Nuestro
+              propósito es anticipar problemas, impulsar oportunidades y
+              convertir el derecho en una herramienta clave para el crecimiento
+              sostenible de tu empresa.
             </p>
           </div>
 
@@ -129,11 +132,11 @@ export default function Nosotros() {
                 <p className="ba-team-card__role">{p.rol}</p>
                 <p>{p.desc}</p>
                 <div className="ba-team-card__links">
-                  <a href={p.linkedin} aria-label={`LinkedIn de ${p.nombre}`}>
-                  <FaLinkedinIn />
+                  <a href={p.linkedin} target="_blank" aria-label={`LinkedIn de ${p.nombre}`}>
+                    <FaLinkedinIn />
                   </a>
-                  <a href={p.mail} aria-label={`Mail de ${p.nombre}`}>
-                  <FaEnvelope />
+                  <a href={`mailto:${p.mail}`} aria-label={`Mail de ${p.nombre}`}>
+                    <FaEnvelope />
                   </a>
                 </div>
               </div>
