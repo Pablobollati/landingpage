@@ -47,8 +47,7 @@
 
 .ba-highlight__image {
   order: 1;
-  background-size: cover;
-  background-position: center;
+  position: relative;
   min-height: 210px;
 }
 
@@ -133,8 +132,6 @@
 .ba-team-card__photo {
   width: 100%;
   padding-top: 70%;
-  background-size: cover;
-  background-position: center;
   background-color: #d0d0d0;
   position: relative;
 }

@@ -13,6 +13,11 @@ body {
   text-align: justify;
 }
 
+.ba-cover-image {
+  object-fit: cover;
+  object-position: center;
+}
+
 .ba-section {
   padding: 80px 24px;
   scroll-margin-top: 50px; // evita que el navbar tape el inicio al hacer anchor scroll

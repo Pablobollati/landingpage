@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import "../styles/components/nosotros.scss";
 
@@ -101,11 +102,16 @@ export default function Nosotros() {
                   idx % 2 === 1 ? "ba-highlight--reverse" : ""
                 }`}
               >
-                <div
-                  className="ba-highlight__image"
-                  style={{ backgroundImage: `url(${imagen})` }}
-                  aria-hidden="true"
-                />
+                <div className="ba-highlight__image">
+                  <Image
+                    src={imagen}
+                    alt={titulo}
+                    fill
+                    sizes="(max-width: 960px) 100vw, 42vw"
+                    quality={85}
+                    className="ba-cover-image"
+                  />
+                </div>
                 <div className="ba-highlight__body">
                   <h3>{titulo}</h3>
                   <p>{texto}</p>
@@ -122,11 +128,16 @@ export default function Nosotros() {
         <div className="ba-about__team">
           {equipo.map((p) => (
             <article key={p.nombre} className="ba-team-card ba-reveal">
-              <div
-                className="ba-team-card__photo"
-                style={{ backgroundImage: `url(${p.foto})` }}
-                aria-hidden="true"
-              />
+              <div className="ba-team-card__photo">
+                <Image
+                  src={p.foto}
+                  alt={`Foto de ${p.nombre}`}
+                  fill
+                  sizes="(max-width: 719px) 100vw, (max-width: 1039px) 50vw, 33vw"
+                  quality={85}
+                  className="ba-cover-image"
+                />
+              </div>
               <div className="ba-team-card__info">
                 <h4>{p.nombre}</h4>
                 <p className="ba-team-card__role">{p.rol}</p>

@@ -5,9 +5,37 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section id="inicio" className="ba-hero">
-      <div className="bg bg1"></div>
-      <div className="bg bg2"></div>
-      <div className="bg bg3"></div>
+      <div className="bg bg1" aria-hidden="true">
+        <Image
+          src="/images/hero2.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          quality={85}
+          priority
+          className="ba-cover-image"
+        />
+      </div>
+      <div className="bg bg2" aria-hidden="true">
+        <Image
+          src="/images/hero6.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          quality={85}
+          className="ba-cover-image"
+        />
+      </div>
+      <div className="bg bg3" aria-hidden="true">
+        <Image
+          src="/images/hero7.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          quality={85}
+          className="ba-cover-image"
+        />
+      </div>
       
 
       <div className="overlay">
